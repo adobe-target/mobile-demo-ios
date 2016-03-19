@@ -16,7 +16,7 @@
     "analytics": {
         "rsids": "sum027template",
         "server": "adobesummit027.sc.omtrdc.net",
-        "ssl": false,
+        "ssl": true,
         "offlineEnabled": false,
         "charset": "UTF-8",
         "lifecycleTimeout": 300,
