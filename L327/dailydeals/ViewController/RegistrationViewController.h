@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ADBMobile.h"
+
+
 
 @interface RegistrationViewController : UIViewController
 -(IBAction)btnBackClk:(id)sender;

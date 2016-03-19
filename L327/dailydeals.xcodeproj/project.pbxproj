@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36189BCA1C9A410800B60542 /* ADBMobileConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 36189BC51C9A410800B60542 /* ADBMobileConfig.json */; };
+		36189BCB1C9A410800B60542 /* AdobeMobileLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36189BC61C9A410800B60542 /* AdobeMobileLibrary.a */; };
+		36189BCC1C9A410800B60542 /* AdobeMobileLibrary_Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36189BC71C9A410800B60542 /* AdobeMobileLibrary_Extension.a */; };
+		36189BCF1C9A421E00B60542 /* ADBMobileConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 36189BC51C9A410800B60542 /* ADBMobileConfig.json */; };
+		36189BD11C9A427200B60542 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36189BD01C9A427200B60542 /* SystemConfiguration.framework */; };
+		36189BD31C9A428000B60542 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 36189BD21C9A428000B60542 /* libsqlite3.0.tbd */; };
 		84E0E9AC1921180E001B388B /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E0E9AB1921180E001B388B /* Logo.png */; };
 		8E3B303818F3C62100DEC655 /* Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E3B302818F3C62100DEC655 /* Arrow.png */; };
 		8E3B303918F3C62100DEC655 /* Arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E3B302918F3C62100DEC655 /* Arrow@2x.png */; };
@@ -119,6 +125,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36189BC41C9A410800B60542 /* ADBMobile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBMobile.h; sourceTree = "<group>"; };
+		36189BC51C9A410800B60542 /* ADBMobileConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ADBMobileConfig.json; sourceTree = "<group>"; };
+		36189BC61C9A410800B60542 /* AdobeMobileLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AdobeMobileLibrary.a; sourceTree = "<group>"; };
+		36189BC71C9A410800B60542 /* AdobeMobileLibrary_Extension.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AdobeMobileLibrary_Extension.a; sourceTree = "<group>"; };
+		36189BD01C9A427200B60542 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		36189BD21C9A428000B60542 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		84E0E9AB1921180E001B388B /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		8E3B302818F3C62100DEC655 /* Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrow.png; sourceTree = "<group>"; };
 		8E3B302918F3C62100DEC655 /* Arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrow@2x.png"; sourceTree = "<group>"; };
@@ -241,10 +253,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36189BD31C9A428000B60542 /* libsqlite3.0.tbd in Frameworks */,
+				36189BD11C9A427200B60542 /* SystemConfiguration.framework in Frameworks */,
 				8EEF9FBF18F420740022E7BB /* QuartzCore.framework in Frameworks */,
 				8EC0355B18F2872200946BA8 /* CoreGraphics.framework in Frameworks */,
 				8EC0355D18F2872200946BA8 /* UIKit.framework in Frameworks */,
 				8EC0355918F2872200946BA8 /* Foundation.framework in Frameworks */,
+				36189BCB1C9A410800B60542 /* AdobeMobileLibrary.a in Frameworks */,
+				36189BCC1C9A410800B60542 /* AdobeMobileLibrary_Extension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +277,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36189BC31C9A410800B60542 /* AdobeMobileLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				36189BC41C9A410800B60542 /* ADBMobile.h */,
+				36189BC51C9A410800B60542 /* ADBMobileConfig.json */,
+				36189BC61C9A410800B60542 /* AdobeMobileLibrary.a */,
+				36189BC71C9A410800B60542 /* AdobeMobileLibrary_Extension.a */,
+			);
+			path = AdobeMobileLibrary;
+			sourceTree = "<group>";
+		};
 		8E3B302718F3C62100DEC655 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +316,7 @@
 		8EC0354C18F2872200946BA8 = {
 			isa = PBXGroup;
 			children = (
+				36189BC31C9A410800B60542 /* AdobeMobileLibrary */,
 				8EC0355E18F2872200946BA8 /* DailyDeals */,
 				8EC0357D18F2872300946BA8 /* DailyDealsTests */,
 				8EC0355718F2872200946BA8 /* Frameworks */,
@@ -308,6 +336,8 @@
 		8EC0355718F2872200946BA8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				36189BD21C9A428000B60542 /* libsqlite3.0.tbd */,
+				36189BD01C9A427200B60542 /* SystemConfiguration.framework */,
 				8EEF9FBE18F420740022E7BB /* QuartzCore.framework */,
 				8EC0355818F2872200946BA8 /* Foundation.framework */,
 				8EC0355A18F2872200946BA8 /* CoreGraphics.framework */,
@@ -588,6 +618,7 @@
 				8EC035BC18F2CF2D00946BA8 /* price-rectangle.png in Resources */,
 				8E3B304318F3C62100DEC655 /* cross@2x.png in Resources */,
 				8EC035BF18F2CF2D00946BA8 /* detailWithLine@2x.png in Resources */,
+				36189BCA1C9A410800B60542 /* ADBMobileConfig.json in Resources */,
 				8EEF9FC218F421C80022E7BB /* barcodeimage.png in Resources */,
 				8E3B303F18F3C62100DEC655 /* btnEdit@2x.png in Resources */,
 				8EEF9FB018F417CB0022E7BB /* barCode.png in Resources */,
@@ -662,6 +693,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EC0358218F2872300946BA8 /* InfoPlist.strings in Resources */,
+				36189BCF1C9A421E00B60542 /* ADBMobileConfig.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -816,6 +848,10 @@
 				GCC_PREFIX_HEADER = "DailyDeals/DailyDeals-Prefix.pch";
 				INFOPLIST_FILE = "DailyDeals/DailyDeals-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AdobeMobileLibrary",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teks.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -832,6 +868,10 @@
 				GCC_PREFIX_HEADER = "DailyDeals/DailyDeals-Prefix.pch";
 				INFOPLIST_FILE = "DailyDeals/DailyDeals-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AdobeMobileLibrary",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teks.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

@@ -7,6 +7,8 @@
 //
 
 #import "RegistrationViewController.h"
+#import "ADBMobile.h"
+
 
 @interface RegistrationViewController ()
 
@@ -26,7 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    [self makeMboxConfirm];
 }
 -(IBAction)btnBackClk:(id)sender
 {
@@ -40,4 +42,18 @@
 - (BOOL)prefersStatusBarHidden {
     return YES;
 }
+
+-(void) makeMboxConfirm
+{
+    ADBTargetLocationRequest* registersuccess = [ADBMobile targetCreateOrderConfirmRequestWithName:@"m5-user-registered"
+                                                                                            orderId:nil
+                                                                                            orderTotal:nil
+                                                                                            productPurchasedId:nil
+                                                                                            parameters:nil];
+    [ADBMobile targetLoadRequest:registersuccess callback:^(NSString *content){
+        NSLog(@"💛 Fired a success metric 💛");
+    }];
+    
+}
+
 @end

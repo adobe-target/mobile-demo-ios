@@ -18,6 +18,12 @@
 @property(nonatomic,strong)IBOutlet UIButton *btnRegister;
 @property(nonatomic,strong)IBOutlet UITextField *txtFieldEmail;
 @property(nonatomic,strong)IBOutlet UITextField *txtFieldPassword;
+@property (weak, nonatomic) IBOutlet UILabel *welcomeMessage;
+
+
+-(void)welcomeMessageCampaign;
+-(void)welcomeMessageCampaignChanges: (NSString*) content;
+
 
 -(IBAction)btnLoginClk:(id)sender;
 -(IBAction)btnFacebookLoginClk:(id)sender;

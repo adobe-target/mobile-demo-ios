@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "DailyDealsViewController.h"
+#import "ADBMobile.h"
 
 @interface ViewController ()
 
@@ -22,7 +23,10 @@
     //Hide navigation bar and set scrollview contentSize
     [[self navigationController] setNavigationBarHidden:YES animated:YES];
     self.scrollView.contentSize=CGSizeMake(320, 560);
-  
+
+    [self welcomeMessageCampaign];
+    
+   
 }
 #pragma mark Button Action
 -(IBAction)btnLoginClk:(id)sender
@@ -99,4 +103,39 @@
 - (BOOL)prefersStatusBarHidden {
     return YES;
 }
+
+
+- (void)welcomeMessageCampaign
+{
+    
+//     Here 'M5-welcome-message' is the name of the location. This will show up in the content location dropdown
+//     in the UI.
+//    
+//     Replace M5 with your unique user number eg: E7-welcome-message
+    
+    
+    ADBTargetLocationRequest* locationRequest = [ADBMobile targetCreateRequestWithName:@"M5-welcome-message"
+                                                                        defaultContent:@"Good afternoon"
+                                                                        parameters:nil];
+    
+    [ADBMobile targetLoadRequest:locationRequest callback:^(NSString *content){
+        NSLog(@"💛 Response from Target --- %@", content);
+        [self performSelectorOnMainThread:@selector(welcomeMessageCampaignChanges:) withObject:content waitUntilDone:NO];
+       
+    }];
+    
+}
+
+-(void)welcomeMessageCampaignChanges: (NSString*) content
+{
+    self.welcomeMessage.text = content;
+    self.welcomeMessage.font = [UIFont fontWithName:@"Helvetica" size:13];
+    self.welcomeMessage.numberOfLines = 0;
+}
+
+
 @end
+
+
+
+
