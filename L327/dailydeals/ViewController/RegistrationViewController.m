@@ -45,14 +45,14 @@
 
 -(void) makeMboxConfirm
 {
-//    ADBTargetLocationRequest* registersuccess = [ADBMobile targetCreateOrderConfirmRequestWithName:@"m5-user-registered"
-//                                                                                            orderId:nil
-//                                                                                            orderTotal:nil
-//                                                                                            productPurchasedId:nil
-//                                                                                            parameters:nil];
-//    [ADBMobile targetLoadRequest:registersuccess callback:^(NSString *content){
-//        NSLog(@"💛 Fired a success metric 💛");
-//    }];
+    ADBTargetLocationRequest* registersuccess = [ADBMobile targetCreateOrderConfirmRequestWithName:@"E7-user-registered"
+                                                                                            orderId:nil
+                                                                                            orderTotal:nil
+                                                                                            productPurchasedId:nil
+                                                                                            parameters:nil];
+    [ADBMobile targetLoadRequest:registersuccess callback:^(NSString *content){
+        NSLog(@"⚡️ Fired a success metric ⚡️");
+    }];
     
 }
 

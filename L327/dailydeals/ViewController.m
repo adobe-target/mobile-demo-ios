@@ -114,15 +114,15 @@
 //     Replace M5 with your unique user number eg: E7-welcome-message
     
     
-//    ADBTargetLocationRequest* locationRequest = [ADBMobile targetCreateRequestWithName:@"M5-welcome-message"
-//                                                                        defaultContent:@"Good afternoon"
-//                                                                        parameters:nil];
-//    
-//    [ADBMobile targetLoadRequest:locationRequest callback:^(NSString *content){
-//        NSLog(@"💛 Response from Target --- %@", content);
-//        [self performSelectorOnMainThread:@selector(welcomeMessageCampaignChanges:) withObject:content waitUntilDone:NO];
-//       
-//    }];
+    ADBTargetLocationRequest* locationRequest = [ADBMobile targetCreateRequestWithName:@"E7-welcome-message"
+                                                                        defaultContent:@"Good afternoon"
+                                                                        parameters:nil];
+    
+    [ADBMobile targetLoadRequest:locationRequest callback:^(NSString *content){
+        NSLog(@"⚡️Response from Target --- %@ ⚡️", content);
+        [self performSelectorOnMainThread:@selector(welcomeMessageCampaignChanges:) withObject:content waitUntilDone:NO];
+       
+    }];
     
 }
 
