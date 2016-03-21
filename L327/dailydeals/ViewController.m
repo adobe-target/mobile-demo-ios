@@ -114,7 +114,7 @@
 //     Replace M5 with your unique user number eg: E7-welcome-message
     
     
-    ADBTargetLocationRequest* locationRequest = [ADBMobile targetCreateRequestWithName:@"M5-welcome-message"
+    ADBTargetLocationRequest* locationRequest = [ADBMobile targetCreateRequestWithName:@"K5-welcome-message"
                                                                         defaultContent:@"Good afternoon"
                                                                         parameters:nil];
     

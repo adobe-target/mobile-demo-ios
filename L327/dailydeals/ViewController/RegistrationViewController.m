@@ -45,7 +45,7 @@
 
 -(void) makeMboxConfirm
 {
-    ADBTargetLocationRequest* registersuccess = [ADBMobile targetCreateOrderConfirmRequestWithName:@"M5-user-registered"
+    ADBTargetLocationRequest* registersuccess = [ADBMobile targetCreateOrderConfirmRequestWithName:@"K5-user-registered"
                                                                                             orderId:nil
                                                                                             orderTotal:nil
                                                                                             productPurchasedId:nil
