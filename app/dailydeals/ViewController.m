@@ -108,21 +108,32 @@
 - (void)welcomeMessageCampaign
 {
     
-//     Here 'M5-welcome-message' is the name of the location. This will show up in the content location dropdown
+//     Here 'home-message' is the name of the location. This will show up in the content location dropdown
 //     in the UI.
-//    
-//     Replace M5 with your unique user number eg: E7-welcome-message
+
+
+    NSDictionary *targetParams = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                  @"platinum",@"userLevel",
+                                  @26500,@"userMiles",
+                                  @"1067007",@"entity.id",
+                                  @"dealsapp.qa", @"host",
+                                  @"fashion",@"entity.categoryId",
+                                  @"millenial", @"profile.persona",
+                                  @"cohort_5", @"profile.cohort",
+                                  nil];
     
+    ADBTargetLocationRequest* locationRequest = [ADBMobile targetCreateRequestWithName:@"home-message"
+                                                                        defaultContent:@"Good afternoon"
+                                                                        parameters:targetParams];
     
-//    ADBTargetLocationRequest* locationRequest = [ADBMobile targetCreateRequestWithName:@"K5-welcome-message"
-//                                                                        defaultContent:@"Good afternoon"
-//                                                                        parameters:nil];
-//    
-//    [ADBMobile targetLoadRequest:locationRequest callback:^(NSString *content){
-//        NSLog(@"⚡️Response from Target --- %@ ⚡️", content);
-//        [self performSelectorOnMainThread:@selector(welcomeMessageCampaignChanges:) withObject:content waitUntilDone:NO];
-//       
-//    }];
+    [ADBMobile targetLoadRequest:locationRequest callback:^(NSString *content){
+        NSLog(@"⚡️Response from Target --- %@ ⚡️", content);
+
+        //It is typically a bad practice to run on the main thread! This is just for the demo.
+        //In your production app, get this content before the view is rendered so that the end user won't see a flicker when new content is inserted or replaced.
+        [self performSelectorOnMainThread:@selector(welcomeMessageCampaignChanges:) withObject:content waitUntilDone:NO];
+       
+    }];
     
 }
 
