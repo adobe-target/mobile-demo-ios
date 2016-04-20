@@ -111,6 +111,12 @@
 //     Here 'home-message' is the name of the location. This will show up in the content location dropdown
 //     in the UI.
 
+//    Pass the mboxThirdpartyID to Target to connect web and app profiles.
+//    NSDictionary *targetParams = [[NSDictionary alloc] initWithObjectsAndKeys:
+//                                  @"YOUR-INTERNAL-USERID", @"mbox3rdPartyId",
+//                                  nil];
+  
+    
 
     NSDictionary *targetParams = [[NSDictionary alloc] initWithObjectsAndKeys:
                                   @"platinum",@"userLevel",
