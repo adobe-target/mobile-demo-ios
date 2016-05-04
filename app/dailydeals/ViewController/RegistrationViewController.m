@@ -45,6 +45,16 @@
 
 -(void) makeMboxConfirm
 {
+
+//    Use the targetCreateOrderConfirmRequestWithName call to track a conversion or record a purchase.
+//    If the conversion event isn't a revenue transaction, pass 'nil' for the three reservered parameters.
+
+//    In the example below,
+//    "12345" - Replace with dynamic variable representing a unique order ID
+//    "39.95" - Replace with a dynamic variable representing a unique order total
+//    "abcdef"- Replace with a dynamic variable representing a comma delimited list of products purchased
+//    nil - Optional dictionary of additional parameters
+    
     ADBTargetLocationRequest* registersuccess = [ADBMobile targetCreateOrderConfirmRequestWithName:@"K5-user-registered"
                                                                                             orderId:@"12345"
                                                                                             orderTotal:@"29.99"
