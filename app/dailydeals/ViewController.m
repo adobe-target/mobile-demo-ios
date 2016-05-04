@@ -107,27 +107,25 @@
 
 - (void)welcomeMessageCampaign
 {
-    
-//     Here 'home-message' is the name of the location. This will show up in the content location dropdown
-//     in the UI.
-
-//    Pass the mboxThirdpartyID to Target to connect web and app profiles.
-//    NSDictionary *targetParams = [[NSDictionary alloc] initWithObjectsAndKeys:
-//                                  @"YOUR-INTERNAL-USERID", @"mbox3rdPartyId",
-//                                  nil];
-  
+    //  Passing custom parameters for targeting. In this example, the parameters are
+    //  hardcoded but typically variables should be used for sending custom profile information.
+    //  If the key is prefixed with 'profile'(eg: profile.persona) the information is stored on the
+    //  user's profile.
     
 
     NSDictionary *targetParams = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                  @"platinum",@"userLevel",
-                                  @26500,@"userMiles",
+                                  @"has_pres", @"profile.persona",
+                                  @"platinum", @"profile.memberLevel",
+                                  @"true", @"loyaltyAccount",
+                                  @"prod",@"host",
                                   @"1067007",@"entity.id",
-                                  @"dealsapp.qa", @"host",
                                   @"fashion",@"entity.categoryId",
-                                  @"millenial", @"profile.persona",
-                                  @"cohort_5", @"profile.cohort",
+                                  @"12345abcde", @"mbox3rdPartyId",
                                   nil];
     
+    // Here 'home-message' is the name of the location. This will show up in the content
+    // location dropdown in the UI.
+
     ADBTargetLocationRequest* locationRequest = [ADBMobile targetCreateRequestWithName:@"home-message"
                                                                         defaultContent:@"Good afternoon"
                                                                         parameters:targetParams];
@@ -135,8 +133,9 @@
     [ADBMobile targetLoadRequest:locationRequest callback:^(NSString *content){
         NSLog(@"⚡️Response from Target --- %@ ⚡️", content);
 
-        //It is typically a bad practice to run on the main thread! This is just for the demo.
-        //In your production app, get this content before the view is rendered so that the end user won't see a flicker when new content is inserted or replaced.
+    // It is typically a bad practice to run on the main thread! This is just for the demo.
+    // In your production app, get this content before the view is rendered so that the end
+    // user won't see a flicker when new content is inserted or replaced.
         [self performSelectorOnMainThread:@selector(welcomeMessageCampaignChanges:) withObject:content waitUntilDone:NO];
        
     }];

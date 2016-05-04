@@ -18,7 +18,7 @@
                                             withAnimation:UIStatusBarAnimationFade];
 
     [ADBMobile collectLifecycleData];
-//    [ADBMobile setDebugLogging:YES];
+    [ADBMobile setDebugLogging:YES];
     return YES;
 }
 							
