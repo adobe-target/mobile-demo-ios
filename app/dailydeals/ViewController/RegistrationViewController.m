@@ -57,7 +57,7 @@
     
     ADBTargetLocationRequest* registersuccess = [ADBMobile targetCreateOrderConfirmRequestWithName:@"K5-user-registered"
                                                                                             orderId:@"12345"
-                                                                                            orderTotal:@"29.99"
+                                                                                            orderTotal:@"39.95"
                                                                                             productPurchasedId:@"abcdef"
                                                                                             parameters:nil];
     [ADBMobile targetLoadRequest:registersuccess callback:^(NSString *content){
