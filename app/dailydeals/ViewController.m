@@ -126,7 +126,7 @@
     // Here 'home-message' is the name of the location. This will show up in the content
     // location dropdown in the UI.
 
-    ADBTargetLocationRequest* locationRequest = [ADBMobile targetCreateRequestWithName:@"home-message"
+    ADBTargetLocationRequest* locationRequest = [ADBMobile targetCreateRequestWithName:@"welcome-message-new"
                                                                         defaultContent:@"Good afternoon"
                                                                         parameters:targetParams];
     

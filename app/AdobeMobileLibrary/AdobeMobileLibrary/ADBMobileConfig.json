@@ -1,0 +1,97 @@
+{
+  "lastModified": "2016-03-02T04:13:45.507Z",
+  "target": {
+    "clientCode": "bullseyedemo",
+    "timeout": 5
+  },
+  "audienceManager": {
+    "server": "",
+    "analyticsForwardingEnabled": false,
+    "timeout": 5
+  },
+  "acquisition": {
+    "server": "c00.adobe.com",
+    "appid": "1d5702df8ffe1d492f8fe33bbdd99490fcb89217501bddb739f163b3d8816709"
+  },
+  "analytics": {
+    "rsids": "geo1xxretailapp419",
+    "server": "adobetechmarketing.sc.omtrdc.net",
+    "ssl": false,
+    "offlineEnabled": true,
+    "charset": "UTF-8",
+    "lifecycleTimeout": 300,
+    "privacyDefault": "optedin",
+    "batchLimit": 0,
+    "timezone": "MDT",
+    "timezoneOffset": -360,
+    "referrerTimeout": 0,
+    "backdateSessionInfo": false,
+    "poi": [
+      [
+        "Adobe San Jose",
+        37.330807,
+        -121.893057,
+        2000
+      ],
+      [
+        "Adobe Utah",
+        40.43485877,
+        -111.8919057,
+        2000
+      ],
+      [
+        "Adobe Seattle",
+        47.649167,
+        -122.348275,
+        2000
+      ],
+      [
+        "Adobe Townsend",
+        37.771829,
+        -122.401681,
+        2000
+      ],
+      [
+        "Adobe Boston",
+        42.386383,
+        -71.263417,
+        2000
+      ],
+      [
+        "Adobe New York",
+        40.758128,
+        -73.984966,
+        2000
+      ],
+      [
+        "Adobe London",
+        51.522857,
+        -0.713403,
+        2000
+      ],
+      [
+        "Adobe Basel",
+        47.554995,
+        7.589997,
+        2000
+      ],
+      [
+        "Adobe Paris",
+        48.802299,
+        2.325518,
+        2000
+      ],
+      [
+        "Adobe Tokyo",
+        35.6197,
+        139.722059,
+        2000
+      ]
+    ]
+  },
+  "messages": [],
+  "remotes": {
+    "analytics.poi": "https://assets.adobedtm.com/b213090c5204bf94318f4ef0539a38b487d10368/scripts/satellite-5613129763613932ac000361.json",
+    "messages": "https://assets.adobedtm.com/b213090c5204bf94318f4ef0539a38b487d10368/scripts/satellite-561312946130330017000052.json"
+  }
+}
