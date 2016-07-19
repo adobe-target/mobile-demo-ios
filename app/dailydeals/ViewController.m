@@ -114,7 +114,7 @@
     
     
     NSDictionary *targetParams = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                  @"has_pres", @"profile.persona",
+                                  @"male", @"profile.gender",
                                   @"platinum", @"profile.memberLevel",
                                   @"true", @"loyaltyAccount",
                                   @"prod",@"host",
