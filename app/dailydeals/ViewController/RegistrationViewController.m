@@ -53,16 +53,30 @@
 //    "12345" - Replace with dynamic variable representing a unique order ID
 //    "39.95" - Replace with a dynamic variable representing a unique order total
 //    "abcdef"- Replace with a dynamic variable representing a comma delimited list of products purchased
-//    nil - Optional dictionary of additional parameters
+//    targetParams - Optional dictionary of additional parameters
     
-    ADBTargetLocationRequest* registersuccess = [ADBMobile targetCreateOrderConfirmRequestWithName:@"K5-user-registered"
+    NSDictionary *targetParams = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                  @"platinum", @"profile.memberLevel",
+                                  @"male", @"profile.gender",
+                                  @"true", @"loyaltyAccount",
+                                  @"fashion",@"entity.categoryId",
+                                  @"12345abcde", @"mbox3rdPartyId",
+                                  @"dailsdeals.prod", @"mboxHost",
+                                  nil];
+
+
+    ADBTargetLocationRequest* registersuccess = [ADBMobile targetCreateOrderConfirmRequestWithName:@"user-registered"
                                                                                             orderId:@"12345"
                                                                                             orderTotal:@"39.95"
                                                                                             productPurchasedId:@"abcdef"
-                                                                                            parameters:nil];
+                                                                                            parameters:targetParams];
     [ADBMobile targetLoadRequest:registersuccess callback:^(NSString *content){
         NSLog(@"⚡️ Fired a success metric ⚡️");
     }];
+
+    NSMutableDictionary *contextData = [NSMutableDictionary dictionary];
+    [contextData setObject:@"Twitter" forKey:@"loginsource"];
+    [ADBMobile trackAction:@"myapp.SocialShare" data:contextData];
     
 }
 

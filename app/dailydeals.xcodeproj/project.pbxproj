@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		36189BD11C9A427200B60542 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36189BD01C9A427200B60542 /* SystemConfiguration.framework */; };
 		36189BD31C9A428000B60542 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 36189BD21C9A428000B60542 /* libsqlite3.0.tbd */; };
-		367851AB1CF66B4000FBD196 /* ADBMobileConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 367851A61CF66AE500FBD196 /* ADBMobileConfig.json */; };
-		367851AC1CF66B4100FBD196 /* ADBMobileConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 367851A61CF66AE500FBD196 /* ADBMobileConfig.json */; };
-		367851AD1CF66B9D00FBD196 /* AdobeMobileLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 367851A71CF66AE500FBD196 /* AdobeMobileLibrary.a */; };
-		367851AE1CF66BA200FBD196 /* AdobeMobileLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 367851A71CF66AE500FBD196 /* AdobeMobileLibrary.a */; };
-		367851AF1CF66BB500FBD196 /* AdobeMobileLibrary_Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 367851A81CF66AE500FBD196 /* AdobeMobileLibrary_Extension.a */; };
+		367851B01CF671C800FBD196 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC0356E18F2872200946BA8 /* ViewController.m */; };
+		36B278311D3EECF400143D38 /* ADBMobileConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 36B2782C1D3EECED00143D38 /* ADBMobileConfig.json */; };
+		36B278321D3EECF500143D38 /* ADBMobileConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 36B2782C1D3EECED00143D38 /* ADBMobileConfig.json */; };
+		36B278331D3EED3300143D38 /* AdobeMobileLibrary_Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36B2782E1D3EECED00143D38 /* AdobeMobileLibrary_Extension.a */; };
+		36B278341D3EED3600143D38 /* AdobeMobileLibrary_TV.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36B2782F1D3EECED00143D38 /* AdobeMobileLibrary_TV.a */; };
+		36B278351D3EED3900143D38 /* AdobeMobileLibrary_Watch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36B278301D3EECED00143D38 /* AdobeMobileLibrary_Watch.a */; };
 		84E0E9AC1921180E001B388B /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E0E9AB1921180E001B388B /* Logo.png */; };
 		8E3B303818F3C62100DEC655 /* Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E3B302818F3C62100DEC655 /* Arrow.png */; };
 		8E3B303918F3C62100DEC655 /* Arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E3B302918F3C62100DEC655 /* Arrow@2x.png */; };
@@ -128,12 +129,12 @@
 /* Begin PBXFileReference section */
 		36189BD01C9A427200B60542 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		36189BD21C9A428000B60542 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		367851A51CF66AE500FBD196 /* ADBMobile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADBMobile.h; sourceTree = "<group>"; };
-		367851A61CF66AE500FBD196 /* ADBMobileConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ADBMobileConfig.json; sourceTree = "<group>"; };
-		367851A71CF66AE500FBD196 /* AdobeMobileLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AdobeMobileLibrary.a; sourceTree = "<group>"; };
-		367851A81CF66AE500FBD196 /* AdobeMobileLibrary_Extension.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AdobeMobileLibrary_Extension.a; sourceTree = "<group>"; };
-		367851A91CF66AE500FBD196 /* AdobeMobileLibrary_TV.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AdobeMobileLibrary_TV.a; sourceTree = "<group>"; };
-		367851AA1CF66AE500FBD196 /* AdobeMobileLibrary_Watch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AdobeMobileLibrary_Watch.a; sourceTree = "<group>"; };
+		36B2782B1D3EECED00143D38 /* ADBMobile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADBMobile.h; sourceTree = "<group>"; };
+		36B2782C1D3EECED00143D38 /* ADBMobileConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ADBMobileConfig.json; sourceTree = "<group>"; };
+		36B2782D1D3EECED00143D38 /* AdobeMobileLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AdobeMobileLibrary.a; sourceTree = "<group>"; };
+		36B2782E1D3EECED00143D38 /* AdobeMobileLibrary_Extension.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AdobeMobileLibrary_Extension.a; sourceTree = "<group>"; };
+		36B2782F1D3EECED00143D38 /* AdobeMobileLibrary_TV.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AdobeMobileLibrary_TV.a; sourceTree = "<group>"; };
+		36B278301D3EECED00143D38 /* AdobeMobileLibrary_Watch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AdobeMobileLibrary_Watch.a; sourceTree = "<group>"; };
 		84E0E9AB1921180E001B388B /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		8E3B302818F3C62100DEC655 /* Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrow.png; sourceTree = "<group>"; };
 		8E3B302918F3C62100DEC655 /* Arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrow@2x.png"; sourceTree = "<group>"; };
@@ -257,13 +258,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				36189BD31C9A428000B60542 /* libsqlite3.0.tbd in Frameworks */,
-				367851AF1CF66BB500FBD196 /* AdobeMobileLibrary_Extension.a in Frameworks */,
+				36B278331D3EED3300143D38 /* AdobeMobileLibrary_Extension.a in Frameworks */,
 				36189BD11C9A427200B60542 /* SystemConfiguration.framework in Frameworks */,
 				8EEF9FBF18F420740022E7BB /* QuartzCore.framework in Frameworks */,
+				36B278351D3EED3900143D38 /* AdobeMobileLibrary_Watch.a in Frameworks */,
 				8EC0355B18F2872200946BA8 /* CoreGraphics.framework in Frameworks */,
 				8EC0355D18F2872200946BA8 /* UIKit.framework in Frameworks */,
-				367851AD1CF66B9D00FBD196 /* AdobeMobileLibrary.a in Frameworks */,
 				8EC0355918F2872200946BA8 /* Foundation.framework in Frameworks */,
+				36B278341D3EED3600143D38 /* AdobeMobileLibrary_TV.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,25 +276,23 @@
 				8EC0357818F2872300946BA8 /* XCTest.framework in Frameworks */,
 				8EC0357A18F2872300946BA8 /* UIKit.framework in Frameworks */,
 				8EC0357918F2872300946BA8 /* Foundation.framework in Frameworks */,
-				367851AE1CF66BA200FBD196 /* AdobeMobileLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		367851A41CF66AE500FBD196 /* AdobeMobileLibrary */ = {
+		36B2782A1D3EECED00143D38 /* AdobeMobileLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				367851A51CF66AE500FBD196 /* ADBMobile.h */,
-				367851A61CF66AE500FBD196 /* ADBMobileConfig.json */,
-				367851A71CF66AE500FBD196 /* AdobeMobileLibrary.a */,
-				367851A81CF66AE500FBD196 /* AdobeMobileLibrary_Extension.a */,
-				367851A91CF66AE500FBD196 /* AdobeMobileLibrary_TV.a */,
-				367851AA1CF66AE500FBD196 /* AdobeMobileLibrary_Watch.a */,
+				36B2782B1D3EECED00143D38 /* ADBMobile.h */,
+				36B2782C1D3EECED00143D38 /* ADBMobileConfig.json */,
+				36B2782D1D3EECED00143D38 /* AdobeMobileLibrary.a */,
+				36B2782E1D3EECED00143D38 /* AdobeMobileLibrary_Extension.a */,
+				36B2782F1D3EECED00143D38 /* AdobeMobileLibrary_TV.a */,
+				36B278301D3EECED00143D38 /* AdobeMobileLibrary_Watch.a */,
 			);
-			name = AdobeMobileLibrary;
-			path = AdobeMobileLibrary/AdobeMobileLibrary;
+			path = AdobeMobileLibrary;
 			sourceTree = "<group>";
 		};
 		8E3B302718F3C62100DEC655 /* Profile */ = {
@@ -323,7 +323,7 @@
 		8EC0354C18F2872200946BA8 = {
 			isa = PBXGroup;
 			children = (
-				367851A41CF66AE500FBD196 /* AdobeMobileLibrary */,
+				36B2782A1D3EECED00143D38 /* AdobeMobileLibrary */,
 				8EC0355E18F2872200946BA8 /* DailyDeals */,
 				8EC0357D18F2872300946BA8 /* DailyDealsTests */,
 				8EC0355718F2872200946BA8 /* Frameworks */,
@@ -628,7 +628,7 @@
 				8EC035BC18F2CF2D00946BA8 /* price-rectangle.png in Resources */,
 				8E3B304318F3C62100DEC655 /* cross@2x.png in Resources */,
 				8EC035BF18F2CF2D00946BA8 /* detailWithLine@2x.png in Resources */,
-				367851AB1CF66B4000FBD196 /* ADBMobileConfig.json in Resources */,
+				36B278311D3EECF400143D38 /* ADBMobileConfig.json in Resources */,
 				8EEF9FC218F421C80022E7BB /* barcodeimage.png in Resources */,
 				8E3B303F18F3C62100DEC655 /* btnEdit@2x.png in Resources */,
 				8EEF9FB018F417CB0022E7BB /* barCode.png in Resources */,
@@ -703,7 +703,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EC0358218F2872300946BA8 /* InfoPlist.strings in Resources */,
-				367851AC1CF66B4100FBD196 /* ADBMobileConfig.json in Resources */,
+				36B278321D3EECF500143D38 /* ADBMobileConfig.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -735,6 +735,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				367851B01CF671C800FBD196 /* ViewController.m in Sources */,
 				8EC0358418F2872300946BA8 /* DailyDealsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

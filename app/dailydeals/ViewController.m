@@ -19,14 +19,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.
     //Hide navigation bar and set scrollview contentSize
     [[self navigationController] setNavigationBarHidden:YES animated:YES];
     self.scrollView.contentSize=CGSizeMake(320, 560);
-
+    
     [self welcomeMessageCampaign];
-   
-   
+    
+    
 }
 #pragma mark Button Action
 -(IBAction)btnLoginClk:(id)sender
@@ -43,11 +43,11 @@
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-   if ([segue.identifier isEqualToString:@"loginToDailyDeatls"]) {
-       
-      // DailyDealsViewController *newSegue=segue.destinationViewController;
-       //Pass any value to dailyDetails ViewController if require
-   }
+    if ([segue.identifier isEqualToString:@"loginToDailyDeatls"]) {
+        
+        // DailyDealsViewController *newSegue=segue.destinationViewController;
+        //Pass any value to dailyDetails ViewController if require
+    }
 }
 #pragma mark UITExtField delegate
 -(void)textFieldDidBeginEditing:(UITextField *)textField
@@ -59,7 +59,7 @@
 {
     if (textField==self.txtFieldEmail) {
         [self.txtFieldPassword becomeFirstResponder];
-       
+        
         
     }else if(textField==self.txtFieldPassword)
     {
@@ -112,7 +112,7 @@
     //  If the key is prefixed with 'profile'(eg: profile.persona) the information is stored on the
     //  user's profile.
     
-
+    
     NSDictionary *targetParams = [[NSDictionary alloc] initWithObjectsAndKeys:
                                   @"has_pres", @"profile.persona",
                                   @"platinum", @"profile.memberLevel",
@@ -123,23 +123,22 @@
                                   @"12345abcde", @"mbox3rdPartyId",
                                   nil];
     
-    // Here 'home-message' is the name of the location. This will show up in the content
+    // Here 'welcome-message-rp' is the name of the location. This will show up in the content
     // location dropdown in the UI.
-
-    ADBTargetLocationRequest* locationRequest = [ADBMobile targetCreateRequestWithName:@"welcome-message-new"
+    
+    ADBTargetLocationRequest* locationRequest = [ADBMobile targetCreateRequestWithName:@"welcome-message-rp"
                                                                         defaultContent:@"Good afternoon"
-                                                                        parameters:targetParams];
+                                                                            parameters:targetParams];
     
     [ADBMobile targetLoadRequest:locationRequest callback:^(NSString *content){
         NSLog(@"⚡️Response from Target --- %@ ⚡️", content);
-
-    // It is typically a bad practice to run on the main thread! This is just for the demo.
-    // In your production app, get this content before the view is rendered so that the end
-    // user won't see a flicker when new content is inserted or replaced.
+        
+        // It is typically a bad practice to run on the main thread! This is just for the demo.
+        // In your production app, get this content before the view is rendered so that the end
+        // user won't see a flicker when new content is inserted or replaced.
         [self performSelectorOnMainThread:@selector(welcomeMessageCampaignChanges:) withObject:content waitUntilDone:NO];
-       
+        
     }];
-    
 }
 
 -(void)welcomeMessageCampaignChanges: (NSString*) content
