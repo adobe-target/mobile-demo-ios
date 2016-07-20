@@ -117,10 +117,12 @@
                                   @"male", @"profile.gender",
                                   @"platinum", @"profile.memberLevel",
                                   @"true", @"loyaltyAccount",
-                                  @"prod",@"host",
                                   @"1067007",@"entity.id",
                                   @"fashion",@"entity.categoryId",
-                                  @"12345abcde", @"mbox3rdPartyId",
+                                  @"12345abcde", @"mbox3rdPartyId", // mbox3rdPartyId is a reserved key where you can pass your crm/internal user identifier
+                                  @"prod.ios", @"envVariable",      // The value (eg: prod.ios) needs to be dynamic based on the app environment.
+                                                                    // This is used for building audiences for testing
+                                  @"prod.ios", @"mboxHost",         // mboxHost is a reserved key used for setting up activity and reporting environments
                                   nil];
     
     // Here 'welcome-message-rp' is the name of the location. This will show up in the content
