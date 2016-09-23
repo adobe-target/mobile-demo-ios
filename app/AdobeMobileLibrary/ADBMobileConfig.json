@@ -19,7 +19,7 @@
   "analytics": {
     "rsids": "ags421dailydeals",
     "server": "adobeags421.sc.omtrdc.net",
-    "ssl": false,
+    "ssl": true,
     "offlineEnabled": true,
     "charset": "UTF-8",
     "lifecycleTimeout": 300,

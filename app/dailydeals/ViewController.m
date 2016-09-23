@@ -117,6 +117,7 @@
                                   @"male", @"profile.gender",
                                   @"platinum", @"profile.memberLevel",
                                   @"true", @"loyaltyAccount",
+                                  @"FR", @"store",
                                   @"1067007",@"entity.id",
                                   @"fashion",@"entity.categoryId",
                                   @"12345abcde", @"mbox3rdPartyId", // mbox3rdPartyId is a reserved key where you can pass your crm/internal user identifier
